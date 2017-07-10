@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rancho Grande</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'materialize.min.css' %}" / />
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" / />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Appetizers</a></li>
+  <li><a href="#!">Soup/Salad</a></li>
+  <li><a href="#!">TexMex</a></li>
+  <li><a href="#!">Entrees</a></li>
+  <li><a href="#!">Mexican</a></li>
+  <li><a href="#!">Kids</a></li>
+
+</ul>
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper blue-grey darken-3">
+        <a href="#!" class="brand-logo">Rancho Grande</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a class="dropdown-button" href="/menu" data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a href="/gallery">Gallery</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/menu">Menu</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  {% block content %} {% endblock %}
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/materialize.min.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+</body>
+
+</html>

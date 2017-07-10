@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load static %}
+{% block content %}
+
+
+{% for dish in dishes %}
+
+
+<div class="row">
+  <div class="col s12 m7">
+    <div class="card small">
+      <div class="card-image">
+        <img class="materialboxed" width="650" src="/static/imgs/dishes/{{dish.id}}.jpg">
+        <!-- <img src="{% static 'imgs/dishes/Chile Con Queso.jpg' %}"> -->
+        <span class="card-title">{{ dish.name }}</span>
+      </div>
+      <div class="card-content">
+        <p>{{ dish.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+
+{% endfor %}
+
+{% endblock %}
