@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
-from .models import Dish
+from .models import Dish, PriceOption
 
 
 
@@ -12,7 +12,7 @@ def home(request):
 
 def menu(request):
     dishes = Dish.objects.all()
-    print dishes
+    print(dishes)
     return render(request, 'menu.html', {'dishes': dishes})
 
 def about(request):
@@ -20,3 +20,14 @@ def about(request):
 
 def gallery(request):
     return render(request, 'gallery.html')
+
+
+
+
+def appetizers(request):
+    appetizers = Dish.objects.filter(menu_category='appetizer')
+    priceOptions = PriceOption.objects.all()
+    print(appetizers)
+    print("Price Options: " , priceOptions)
+
+    return render(request, 'appetizers.html', {'appetizers': appetizers, 'priceOptions': priceOptions})

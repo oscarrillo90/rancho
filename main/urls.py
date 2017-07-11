@@ -1,6 +1,6 @@
 # main_app/urls.py
 from django.conf.urls import url
-from views import index, menu, about, gallery, home
+from views import index, menu, about, gallery, home, appetizers
 
 
 urlpatterns = [
@@ -9,5 +9,7 @@ urlpatterns = [
     url(r'^menu/$', menu, name="menu"),
     url(r'^about/$', about, name="about"),
     url(r'^gallery/$', gallery, name="gallery"),
+    url(r'^appetizers/$', appetizers, name="appetizers"),
+
 
 ]
