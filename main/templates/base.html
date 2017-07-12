@@ -7,6 +7,10 @@
   <link rel="stylesheet" type="text/css" href="{% static 'materialize.min.css' %}" / />
   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" / />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/materialize.min.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
 </head>
 
 
@@ -14,11 +18,12 @@
 
   <ul id="dropdown1" class="dropdown-content">
   <li><a href="/appetizers">Appetizers</a></li>
-  <li><a href="#!">Soup/Salad</a></li>
-  <li><a href="#!">TexMex</a></li>
-  <li><a href="#!">Entrees</a></li>
-  <li><a href="#!">Mexican</a></li>
-  <li><a href="#!">Kids</a></li>
+  <li><a href="/soupSalad">Soup/Salad</a></li>
+  <li><a href="/texmex">TexMex</a></li>
+  <li><a href="/entrees">Entrees</a></li>
+  <li><a href="/mexican">Mexican</a></li>
+  <li><a href="/kids">Kids</a></li>
+  <li><a href="/lunch">Lunch</a></li>
   <li><a href="#!">Catering</a></li>
 
 </ul>
@@ -45,9 +50,7 @@
 
   {% block content %} {% endblock %}
 
-  <script src="{% static 'js/jquery.min.js' %}"></script>
-  <script src="{% static 'js/materialize.min.js' %}"></script>
-  <script src="{% static 'js/app.js' %}"></script>
+  
 </body>
 
 </html>

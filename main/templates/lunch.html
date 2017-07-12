@@ -4,7 +4,7 @@
 
 {% block content %}
 
-{% for entrees in entrees %}
+{% for lunch in lunch %}
 
 
 <div class="container">
@@ -12,15 +12,15 @@
   <div class="col s12 m12 l12">
     <div class="card medium">
       <div class="card-image">
-        <img class="materialboxed" width="650" src="/static/imgs/dishes/{{entrees.id}}.jpg">
+        <img class="materialboxed" width="650" src="/static/imgs/dishes/{{lunch.id}}.jpg">
         <!-- <img src="{% static 'imgs/dishes/Chile Con Queso.jpg' %}"> -->
-        <span class="card-title">{{ entrees.name }}</span>
+        <span class="card-title">{{ lunch.name }}</span>
       </div>
       <div class="card-content">
-        <p>{{ entrees.description}}</p>
+        <p>{{ lunch.description}}</p>
 
         {% for priceOption in priceOptions %}
-            {% if priceOption.dish_id == entrees.id %}
+            {% if priceOption.dish_id == lunch.id %}
               <p>{{priceOption.option}} - {{priceOption.price}}</p>
             {% endif %}
         {% endfor %}

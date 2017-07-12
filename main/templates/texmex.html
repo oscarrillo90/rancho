@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load static %}
+
+{% block content %}
+
+{% for texmex in texmex %}
+
+
+<div class="container">
+<div class="row">
+  <div class="col s12 m12 l12">
+    <div class="card medium">
+      <div class="card-image">
+        <img class="materialboxed" width="650" src="/static/imgs/dishes/{{texmex.id}}.jpg">
+        <!-- <img src="{% static 'imgs/dishes/Chile Con Queso.jpg' %}"> -->
+        <span class="card-title">{{ texmex.name }}</span>
+      </div>
+      <div class="card-content">
+        <p>{{ texmex.description}}</p>
+
+        {% for priceOption in priceOptions %}
+            {% if priceOption.dish_id == texmex.id %}
+              <p>{{priceOption.option}} - {{priceOption.price}}</p>
+            {% endif %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<hr />
+
+{% endfor %}
+
+
+
+{% endblock %}

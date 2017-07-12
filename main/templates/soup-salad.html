@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load static %}
+
+{% block content %}
+
+{% for soupSalad in soupSalad %}
+
+
+<div class="container">
+<div class="row">
+  <div class="col s12 m12 l12">
+    <div class="card medium">
+      <div class="card-image">
+        <img class="materialboxed" width="650" src="/static/imgs/dishes/{{soupSalad.id}}.jpg">
+        <!-- <img src="{% static 'imgs/dishes/Chile Con Queso.jpg' %}"> -->
+        <span class="card-title">{{ soupSalad.name }}</span>
+      </div>
+      <div class="card-content">
+        <p>{{ soupSalad.description}}</p>
+
+        {% for priceOption in priceOptions %}
+            {% if priceOption.dish_id == soupSalad.id %}
+              <p>{{priceOption.option}} - {{priceOption.price}}</p>
+            {% endif %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<hr />
+
+{% endfor %}
+{% endblock %}
