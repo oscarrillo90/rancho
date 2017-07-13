@@ -1,9 +1,194 @@
-{% extends 'base.html' %} {% load staticfiles %} {% block content %}
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load static %}
+{% block content %}
 
 
-<div class="parallax-container">
-  <div class="parallax"><img src="images/parallax1.jpg"></div>
+<div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="/static/imgs/restaurant.jpg">
+      <!-- random image -->
+      <div class="caption center-align">
+        <h3 class="thin-text">Welcome to Rancho Grande!</h3>
+        <h5 class="light grey-text text-lighten-3">Family owned and operated</h5>
+      </div>
+    </li>
+    <li>
+      <img src="/static/imgs/restaurant3.jpg">
+      <!-- random image -->
+      <div class="caption left-align">
+        <h3>Authentic mexican food</h3>
+        <h5 class="light grey-text text-lighten-3">With excellent tex mex options</h5>
+      </div>
+    </li>
+    <li>
+      <img src="/static/imgs/restaurant4.jpg">
+      <!-- random image -->
+      <div class="caption right-align">
+        <h3>Great customer service</h3>
+        <h5 class="light grey-text text-lighten-3">Friendly staff</h5>
+      </div>
+    </li>
+    <li>
+      <img src="/static/imgs/restaurant6.jpg">
+      <!-- random image -->
+      <div class="caption center-align">
+        <h3>Famous for the Best Margaritas and Fajitas in the World</h3>
+        <h5 class="light grey-text text-lighten-3">Come see us today!</h5>
+      </div>
+    </li>
+  </ul>
 </div>
+<!-- Services -->
+<div class="container">
+  <div class="row">
+    <h2 class="section-header center">Services</h2>
+  </div>
+  <div class="row">
+    <div class="col l4 m12 s12">
+      <div class="card medium red darken-4 z-depth-2">
+        <div class="card-content white-text">
+          <h3 class="center-align"><i class="fa fa-desktop fa-3x" aria-hidden="true"></i></h3>
+          <span class="card-title center">Catering</span>
+          <div class="divider"></div>
+          <p class="center">We love to cater to corporate parties, weddings and social events. We specialize in off-site catering and can offer plated meal, family style, and buffet service. Our menus range from family style Fajita, to enchilada platters. We offer full
+            bar packages, which include alcohol, craft cocktails and bartenders.
+          </p>
+        </div>
+        <div class="card-action">
+        </div>
+      </div>
+    </div>
+    <div class="col l4 m12 s12">
+      <div class="card medium pink darken-4 z-depth-2">
+        <div class="card-content white-text">
+          <h3 class="center-align"><i class="fa fa-code fa-3x" aria-hidden="true"></i></h3>
+          <span class="card-title center">Big Parties</span>
+          <div class="divider"></div>
+          <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="card-action">
+        </div>
+      </div>
+    </div>
+    <div class="col l4 m12 s12">
+      <div class="card medium purple darken-4 z-depth-2">
+        <div class="card-content white-text">
+          <h3 class="center-align"><i class="fa fa-university fa-3x" aria-hidden="true"></i></h3>
+          <span class="card-title center">Bar and Grill</span>
+          <div class="divider"></div>
+          <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="card-action">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- parallax -->
+<div class="parallax-container valign-wrapper">
+  <div class="container">
+    <div class="row center">
+      <div class="col l10 offset-l1 valign">
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="{% static '/imgs/about4.jpg' %}"></div>
+</div>
+<!-- Location Section -->
+<div class="container">
+  <h2 class="section-header center">Other Locations</h2>
+  <div class="row">
+    <div class="col l4 m8 offset-m2 s12">
+      <div class="card small">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{% static '/imgs/magnolia.jpg' %}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Rancho Grande - Magnolia, Port Arthur<i class="material-icons right">more_vert</i></span>
+          <p><a href="http://www.ranchograndebarandgrill.com/">Link</a></p>
+        </div>
+
+      </div>
+    </div>
+    <div class="col l4 m8 offset-m2 s12">
+      <div class="card small">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{% static '/imgs/sombrero.jpg' %}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Sombrero<i class="material-icons right">more_vert</i></span>
+          <p><a href="http://www.sombreromexicangrill.com/">Link</a></p>
+        </div>
+
+      </div>
+    </div>
+    <div class="col l4 m8 offset-m2 s12">
+      <div class="card small">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{% static '/imgs/TheBigSombrero.jpg' %}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">The Big Sombrero<i class="material-icons right">more_vert</i></span>
+          <p><a href="http://www.thebigsombrero.net/">Link</a></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+  <div class="divider"></div>
+</div>
+<!-- About Section -->
+<div class="container">
+  <div class="row">
+    <h2 class="section-header center">About</h2>
+  </div>
+  <div class="row">
+    <p class="flow-text center">Rancho Grande Bar & Grill was originated in 1991 by the Carrillo Brothers who came from Guadalajara, the land where most of the tequela is cultivated and the mariachi music lives in your blood. With original recipes like the Chile Relleno and new
+      dishes like the Chicken Diablo... Rancho Grande became a favorite for thousands fo enjoy!
+    </p>
+  </div>
+</div>
+
+<!-- Contacts Section -->
+<div class="container">
+  <div class="row">
+    <h2 class="section-header center">Contact</h2>
+  </div>
+  <div class="row">
+    <p class="flow-text center">Phone: 281-351-1244
+    </p>
+    <p class="flow-text center">Email: brunorcs@yahoo.com
+  </div>
+</div>
+<!-- parallax -->
+<div class="parallax-container valign-wrapper">
+  <div class="container">
+    <div class="row center">
+      <div class="col l10 offset-l1 valign">
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="{% static '/imgs/about2.jpg' %}"></div>
+</div>
+
+<!-- Footer Section -->
+<footer class="page-footer blue-grey darken-2">
+
+  <div class="container center">
+    <p>&copy; 2017 Copyright Rancho Grande, All Rights Reserved</p>
+    <a href="#" class="grey-text lighten-text-4">Privacy Policy</a>
+  </div>
+</footer>
 
 
 
