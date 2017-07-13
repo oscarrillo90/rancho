@@ -15,7 +15,7 @@ I decided to make a new website for my family's restaurant because theirs was re
 <p>You should then be able to open the project on your localhost:8000</p>
 
 <h1>Link to User Stories, Wireframes, and ERD</h1>
-<a href="https://trello.com/b/TRoFoxYy/rancho-grande">Trello</a>
+<a href="https://trello.com/b/EaerOCf4">Trello</a>
 
 <h1>Future Features</h1>
 <ul>
