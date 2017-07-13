@@ -7,10 +7,12 @@
   <link rel="stylesheet" type="text/css" href="{% static 'materialize.min.css' %}" / />
   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" / />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" href="{% static 'logo.ico' %}" type="image/x-icon">
 
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/materialize.min.js' %}"></script>
   <script src="{% static 'js/app.js' %}"></script>
+
 </head>
 
 
@@ -30,19 +32,24 @@
 
     <nav>
       <div class="nav-wrapper blue-grey darken-3">
-        <a href="#!" class="brand-logo">Rancho Grande</a>
+        <img class="logo" align="center" src="/static/imgs/logo.ico" style="width:50px;height:50px;margin-left:10px;">
+        <a href="#!" class="brand-logo" style="margin-left:10px;">Rancho Grande</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="/home">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a class="dropdown-button" href="/menu" data-activates="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="/gallery">Gallery</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="/home">Home</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/menu">Menu</a></li>
           <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/appetizers">Appetizers</a></li>
+          <li><a href="/soupSalad">Soup/Salad</a></li>
+          <li><a href="/texmex">TexMex</a></li>
+          <li><a href="/entrees">Entrees</a></li>
+          <li><a href="/mexican">Mexican</a></li>
+          <li><a href="/kids">Kids</a></li>
+          <li><a href="/lunch">Lunch</a></li>
         </ul>
       </div>
     </nav>
@@ -50,7 +57,7 @@
 
   {% block content %} {% endblock %}
 
-  
+
 </body>
 
 </html>

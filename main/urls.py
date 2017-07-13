@@ -4,7 +4,7 @@ from views import index, menu, about, gallery, home, appetizers, soupSalad, texm
 
 
 urlpatterns = [
-    url(r'^$', index),
+    url(r'^$', about),
     url(r'^home/$', home, name="home"),
     url(r'^menu/$', menu, name="menu"),
     url(r'^about/$', about, name="about"),

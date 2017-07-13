@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% load static %}
-
 {% block content %}
+
+<h1 class="center">Kids</h1>
+
+<div class="container">
+<div class="row">
 
 {% for kids in kids %}
 
 
-<div class="container">
-<div class="row">
-  <div class="col s12 m12 l12">
+
+  <div class="col s6 m6 l6">
     <div class="card medium">
       <div class="card-image">
         <img class="materialboxed" width="650" src="/static/imgs/dishes/{{kids.id}}.jpg">
@@ -28,12 +31,9 @@
       </div>
     </div>
   </div>
-</div>
-</div>
-<hr />
 
 {% endfor %}
-
-
+</div>
+</div>
 
 {% endblock %}

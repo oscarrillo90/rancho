@@ -1,38 +1,46 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% load static %}
-
 {% block content %}
 
+<h1 class="center">Entrees</h1>
+
+<div class="container">
+  <div class="row">
 {% for entrees in entrees %}
 
 
-<div class="container">
-<div class="row">
-  <div class="col s12 m12 l12">
-    <div class="card medium">
-      <div class="card-image">
-        <img class="materialboxed" width="650" src="/static/imgs/dishes/{{entrees.id}}.jpg">
-        <!-- <img src="{% static 'imgs/dishes/Chile Con Queso.jpg' %}"> -->
-        <span class="card-title">{{ entrees.name }}</span>
-      </div>
-      <div class="card-content">
-        <p>{{ entrees.description}}</p>
 
-        {% for priceOption in priceOptions %}
-            {% if priceOption.dish_id == entrees.id %}
-              <p>{{priceOption.option}} - {{priceOption.price}}</p>
-            {% endif %}
-        {% endfor %}
 
-      </div>
+
+<div class="col s6 m6 l6">
+        <div class="card large">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="/static/imgs/dishes/{{entrees.id}}.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{ entrees.name }}<i class="material-icons right">more_vert</i></span>
+      <p>{{ entrees.description}}</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Prices<i class="material-icons right">close</i></span>
+
+      {% for priceOption in priceOptions %}
+          {% if priceOption.dish_id == entrees.id %}
+            <p>{{priceOption.option}} - {{priceOption.price}}</p>
+          {% endif %}
+      {% endfor %}
+
     </div>
   </div>
 </div>
-</div>
-<hr />
+
+
+
 
 {% endfor %}
+</div>
+</div>
 
 
 

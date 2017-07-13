@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('.carousel.carousel-slider').carousel({fullWidth: true});
   $('.parallax').parallax();
   $('.materialboxed').materialbox();
-  $('.slider').slider();
+  $('.slider').slider({height:500});
 
 
 });
