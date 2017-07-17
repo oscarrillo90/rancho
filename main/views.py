@@ -10,6 +10,7 @@ def index(request):
 def home(request):
     return render(request, 'home.html')
 
+# TODO: Does the request to your db for all the dishes actually display the dishes?
 def menu(request):
     dishes = Dish.objects.all()
     print(dishes)
@@ -23,6 +24,10 @@ def gallery(request):
 
 
 
+# TODO: All of these route could all point to the same page, simply send the specific dish data and maybe a category string to display.  like this:
+# return render(request, 'menu.html', {dishes: texmex, priceOptions: texmex_priceoptions, category: 'Tex Mex'} )
+
+# TODO: Remove all of the print statements in production level code
 
 def appetizers(request):
     appetizers = Dish.objects.filter(menu_category='appetizer')
